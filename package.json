@@ -1,12 +1,13 @@
 {
   "name": "bacnet-device",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "docs": "typedoc --excludeInternal --out ./docs src/index.ts",
-    "clean": "rm -rf ./dist",
+    "cleanold": "rm -rf ./dist",
+    "clean": "node -e \"try { require('fs').rmSync('dist', { recursive: true, force: true }) } catch(e) { console.error(e); process.exit(1); }\"",
     "build": "npm run clean && tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@types/debug": "^4.1.12",
     "@types/node": "^24.0.4",
+    "ts-node": "^10.9.2",
     "typedoc": "^0.28.5",
     "typescript": "^5.8.3"
   },
@@ -33,6 +35,7 @@
   "files": [
     "dist/**/*.js",
     "dist/**/*.d.ts",
+    "types/**/*.d.ts",
     "SUPPORTED_OBJECT_TYPES.md"
   ],
   "keywords": [
