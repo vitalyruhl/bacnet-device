@@ -50,3 +50,5 @@ export * from './objects/analogvalue.js';
 
 export * from './objects/integervalue.js';
 export * from './objects/positiveintegervalue.js';
+
+export * from './objects/binaryvalue.js';
