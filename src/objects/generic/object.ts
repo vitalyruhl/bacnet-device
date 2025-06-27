@@ -27,9 +27,8 @@ import {
   StatusFlagsBitString,
 } from '@innovation-system/node-bacnet';
 
-import type { 
-  ReadPropertyMultipleContent,
-} from '@innovation-system/node-bacnet/dist/lib/EventTypes.js';
+
+import type { ReadPropertyMultipleContent } from '@innovation-system/node-bacnet/internal';
 
 import {
   BDAbstractProperty,
